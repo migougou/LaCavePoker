@@ -7,14 +7,17 @@
   - Added the required column `updatedAt` to the `User` table without a default value. This is not possible if the table is not empty.
 
 */
--- AlterTable
-ALTER TABLE "User" DROP COLUMN "firstname",
-DROP COLUMN "name",
-ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-ADD COLUMN     "firstName" TEXT,
-ADD COLUMN     "lastName" TEXT,
-ADD COLUMN     "password" TEXT NOT NULL,
-ADD COLUMN     "updatedAt" TIMESTAMP(3) NOT NULL;
+
+-- CreateTable
+CREATE TABLE "User" (
+    "id" SERIAL PRIMARY KEY,
+    "email" TEXT UNIQUE NOT NULL,
+    "password" TEXT NOT NULL,
+    "firstName" TEXT,
+    "lastName" TEXT,
+    "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
 
 -- CreateTable
 CREATE TABLE "Profile" (
