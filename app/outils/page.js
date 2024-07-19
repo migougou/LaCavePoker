@@ -2,7 +2,7 @@
 import 'flowbite';
 import { useEffect, useState } from 'react';
 
-export default function Services() {
+export default function Outils() {
   const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {

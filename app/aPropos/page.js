@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-export default function about(){
+export default function Apropos(){
   return (
     <>
     <Link href='/app'>
-    <h1>Connexion</h1>
+    <h1>A propos en cours de construction</h1>
     </Link>
     </>
   )
