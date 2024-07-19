@@ -1,6 +1,6 @@
 
 
-export default function Coaching(){
+export default function contact(){
     return (
   
   
