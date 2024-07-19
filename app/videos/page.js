@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-export default function Vidéos(){
+export default function Videos(){
   return (
     <>
     <Link href='/app'>
-    <h1>Vidéos en cours de construction</h1>
+    <h1>Videos en cours de construction</h1>
     </Link>
     </>
   )
