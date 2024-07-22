@@ -1,34 +1,59 @@
 import Link from 'next/link';
 
-export default function NavBar(){
-  return (    
-
-<footer class="bg-black shadow dark:bg-gray-900">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="images/logo 2.png" class="h-8" alt="La Cave Poker Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">La Cave Poker</span>
+export default function Footer() {
+    return (
+        <footer class="text-black">
+            <div className="px-32">
+                <hr className="border-stone-950 sm:mx-auto dark:border-gray-700" />
             </div>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <Link href="/home" class="hover:underline me-4 md:me-6">Home</Link>
-                </li>
-                <li>
-                    <Link href="/about" class="hover:underline me-4 md:me-6">About</Link>
-                </li>
-                <li>
-                    <Link href="/services" class="hover:underline me-4 md:me-6">Services</Link>
-                </li>
-                <li>
-                    <Link href="/contact" class="hover:underline">Contact</Link>
-                </li>
-            </ul>
-        </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">La Cave Poker™</a>. All Rights Reserved.</span>
-    </div>
-</footer>
-
-  )
+            <div class="px-20 pt-2">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <img src="images/logo 2.png" class="h-28" alt="La Cave Poker" />
+                    </div>
+                    <div class="flex-grow relative">
+                        <div class="flex flex-col items-center mt-4">
+                            <span class="text-xl font-semibold mb-4">Toutes nos pages</span>
+                            <div class="flex flex-wrap justify-center space-x-6 text-sm">
+                                <div class="flex flex-col space-y-2">
+                                    <Link href="/" class="hover:underline">Accueil</Link>
+                                    <Link href="/aPropos" class="hover:underline">À propos</Link>
+                                    <Link href="/outils" class="hover:underline">Outils</Link>
+                                </div>
+                                <div class="flex flex-col space-y-2">
+                                    <Link href="/coaching" class="hover:underline">Coaching</Link>
+                                    <Link href="/ranges" class="hover:underline">Ranges</Link>
+                                    <Link href="/videos" class="hover:underline">Vidéos</Link>
+                                </div>
+                            </div>
+                        </div>
+                        <Link href="/contact" class="text-lg font-semibold hover:underline absolute top-0 right-0 mr-24 pt-12">Me contacter</Link>
+                    </div>
+                </div>
+                <div class="my-2 flex justify-between items-center">
+                    <div class="flex-auto flex justify-start">
+                        <span class="text-sm pr-4">Conditions générales d'utilisation</span>
+                        <span class="text-sm">Mentions légales</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:opacity-75">
+                            <img src="images/youtube.png" alt="YouTube" class="h-12" />
+                        </a>
+                        <a href="#" class="hover:opacity-75">
+                            <img src="images/twitch.png" alt="Twitch" class="h-12" />
+                        </a>
+                        <a href="#" class="hover:opacity-75">
+                            <img src="images/instagram.png" alt="Instagram" class="h-12" />
+                        </a>
+                        <a href="#" class="hover:opacity-75">
+                            <img src="images/facebook.png" alt="Facebook" class="h-12" />
+                        </a>
+                        <a href="#" class="hover:opacity-75">
+                            <img src="images/discord.png" alt="Discord" class="h-12" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    )
 }
