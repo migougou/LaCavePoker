@@ -9,31 +9,31 @@ export default function Footer() {
             <div class="px-20 pt-2">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center space-x-4">
-                        <img src="images/logo 2.png" class="h-28" alt="La Cave Poker" />
+                        <Link href="/"><img src="images/logo 2.png" class="h-28" alt="La Cave Poker" /></Link>
                     </div>
                     <div class="flex-grow relative">
                         <div class="flex flex-col items-center mt-4">
                             <span class="text-xl font-semibold mb-4">Toutes nos pages</span>
                             <div class="flex flex-wrap justify-center space-x-6 text-sm">
                                 <div class="flex flex-col space-y-2">
-                                    <Link href="/" class="hover:underline">Accueil</Link>
-                                    <Link href="/aPropos" class="hover:underline">À propos</Link>
-                                    <Link href="/outils" class="hover:underline">Outils</Link>
+                                    <Link href="/" class="hover:text-blue-700">Accueil</Link>
+                                    <Link href="/aPropos" class="hover:text-blue-700">À propos</Link>
+                                    <Link href="/outils" class="hover:text-blue-700">Outils</Link>
                                 </div>
                                 <div class="flex flex-col space-y-2">
-                                    <Link href="/coaching" class="hover:underline">Coaching</Link>
-                                    <Link href="/ranges" class="hover:underline">Ranges</Link>
-                                    <Link href="/videos" class="hover:underline">Vidéos</Link>
+                                    <Link href="/coaching" class="hover:text-blue-700">Coaching</Link>
+                                    <Link href="/ranges" class="hover:text-blue-700">Ranges</Link>
+                                    <Link href="/videos" class="hover:text-blue-700">Vidéos</Link>
                                 </div>
                             </div>
                         </div>
-                        <Link href="/contact" class="text-lg font-semibold hover:underline absolute top-0 right-0 mr-24 pt-12">Me contacter</Link>
+                        <Link href="/contact" class="text-lg font-semibold hover:text-blue-700 absolute top-0 right-0 mr-24 pt-12">Me contacter</Link>
                     </div>
                 </div>
                 <div class="my-2 flex justify-between items-center">
                     <div class="flex-auto flex justify-start">
-                        <span class="text-sm pr-4">Conditions générales d'utilisation</span>
-                        <span class="text-sm">Mentions légales</span>
+                        <a href="#" class="text-sm hover:text-blue-700 pr-4">Conditions générales d'utilisation</a>
+                        <a href="#" class="text-sm hover:text-blue-700">Mentions légales</a>
                     </div>
                     <div class="flex space-x-4">
                         <a href="#" class="hover:opacity-75">

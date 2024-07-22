@@ -8,7 +8,7 @@ export default function NavBar() {
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap items-center justify-between p-4 px-10">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="images/logo 2.png" className="h-12" alt="La Cave Poker Logo" />
+            <Link href="/"><img src="images/logo 2.png" className="h-12" alt="La Cave Poker Logo" /></Link>
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">La Cave Poker
             </span>
           </div>
