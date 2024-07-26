@@ -1,56 +1,66 @@
-'use client';
-import 'flowbite';
-import { useEffect, useState } from 'react';
+"use client"
+import { useState } from 'react';
+import { Button } from 'flowbite-react';
+
+const ToolData = [
+    {
+        name: "GTO Wizard",
+        description: "Description de GTO Wizard...",
+        imageUrl: "https://gtowizard.com/assets/static/intro.d7fe51f.76a3737bf1cde31794e4df2109c7c6bf.png",
+        url: "https://gtowizard.com",
+    },
+    {
+        name: "Swongsim",
+        description: "Description de Swongsim...",
+        imageUrl: "https://www.clubpoker.net/forum-poker/uploads/monthly_2023_10/swong.png.060593831e6e0321f93e8c686b7d6f18.png",
+    },
+    {
+        name: "HUD",
+        description: "Description de HUD...",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBFXZ3DN7R2-W9Zun_IHks-cCbL_zf5pMwjMkNRkxnYdg1vkcnDKI6bfPDqa8XYsAm9I4&usqp=CAU",
+    },
+    {
+        name: "Trackers",
+        description: "Description de Trackers...",
+        imageUrl: "https://d3ltpfxjzvda6e.cloudfront.net/2015/12/18/poker-tracker-big.png",
+    },
+    // Ajoutez d'autres outils ici
+];
 
 export default function Outils() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-    useEffect(() => {
-        // Initialisation des composants JavaScript de Flowbite
-        import('flowbite');
-    }, []);
-
-    const handleSelect = (index) => {
-      setActiveIndex(index);  // Mettre à jour l'index actif
-  };
+    const [selectedTool, setSelectedTool] = useState(null);
 
     return (
-      <div id="default-carousel" className="relative" data-carousel="static">
-      {/* Carousel wrapper */}
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96 w-full">
-          {/* Slides */}
-          {['logo 2.png', 'totoro.png', 'zelda.png'].map((img, index) => (
-              <div key={img} className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === activeIndex ? '' : 'hidden'}`}>
-                  <img src={`/images/${img}`} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto h-auto max-w-none" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} alt={`Slide ${index + 1}`} />
-              </div>
-          ))}
-      </div>
-      {/* Carousel indicators */}
-      <div className="absolute z-30 flex space-x-3 -translate-x-1/2 left-1/2 bottom-5">
-          {['logo 2.png', 'totoro.png', 'zelda.png'].map((_, index) => (
-              <button key={index} type="button" className={`w-3 h-3 rounded-full bg-black ${index === activeIndex ? 'bg-opacity-100' : 'bg-opacity-50'}`} onClick={() => handleSelect(index)} aria-label={`Slide ${index + 1}`}>
-              </button>
-          ))}
-      </div>
-      {/* Navigation arrows */}
-      {/* Previous button */}
-      <button type="button" className="absolute left-0 z-30 p-4 cursor-pointer group focus:outline-none" style={{ top: '50%', left: '30%', transform: 'translateY(-50%)' }} onClick={() => handleSelect((activeIndex - 1 + 3) % 3)}>
-          {/* Previous icon */}
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-opacity-75 bg-black bg-opacity-50">
-              <svg className="w-5 h-5 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M15 19l-7-7 7-7"></path>
-              </svg>
-          </span>
-      </button>
-      {/* Next button */}
-      <button type="button" className="absolute right-0 z-30 p-4 cursor-pointer group focus:outline-none" style={{ top: '50%', right: '30%', transform: 'translateY(-50%)' }} onClick={() => handleSelect((activeIndex + 1) % 3)}>
-          {/* Next icon */}
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-opacity-75 bg-black bg-opacity-50">
-              <svg className="w-5 h-5 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M9 5l7 7-7 7"></path>
-              </svg>
-          </span>
-      </button>
-  </div>
-);
+        <div className="py-10 text-center">
+            <div className="py-10 max-w-4xl mx-auto">
+                <h1 className="text-4xl font-bold mb-3 pb-16">LES OUTILS</h1>
+                <p className="mb-5">Bienvenue sur notre page dédiée aux passionnés de poker cherchant à affiner leur stratégie Hors Table. Ici, vous découvrirez une sélection rigoureusement choisie d'outils essentiels qui vous guideront dans votre quête pour maîtriser l'art du poker. Que vous soyez débutant ou joueur expérimenté, ces ressources sont conçues pour améliorer vos compétences et élever votre jeu à un niveau supérieur.(Cliquez sur le titre de l’outil pour accéder au site)</p>
+            </div>
+            <div className="flex justify-center space-x-4 mb-5">
+                {ToolData.map((tool) => (
+                    <Button
+                        color="gray"
+                        onClick={() => setSelectedTool(tool)}
+                    >
+                        {tool.name}
+                    </Button>
+                ))}
+            </div>
+            <hr className="border-stone-950 sm:mx-auto dark:border-gray-700 max-w-lg mx-auto" />
+
+            {selectedTool && ( // Ajouter une condition pour afficher le contenu de l'outil uniquement s'il est sélectionné
+                <>
+                    <a href={selectedTool.url} target="_blank" rel="noopener noreferrer">
+                        <h2 className="text-3xl font-semibold mb-4 py-16 hover:text-blue-500 cursor-pointer">{selectedTool.name}</h2>
+                    </a>
+                    <div className="flex justify-center items-start space-x-4 max-w-4xl mx-auto pb-20">
+                        <img src={selectedTool.imageUrl} alt={selectedTool.name} className="w-full max-w-lg" />
+                        <div className="w-1/2">
+                            <p>{selectedTool.description}</p>
+                        </div>
+                    </div>
+                </>
+            )}
+        </div>
+    );
 }

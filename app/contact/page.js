@@ -3,7 +3,7 @@
 export default function contact() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-10 p-16">
-      <div className="w-full max-w-4xl bg-white border border-gray-300 shadow-lg rounded-t-md">
+      <div className="w-full max-w-4xl bg-white border border-gray-300 shadow-lg rounded-xl">
         <div className="p-10">
           <div className="flex flex-wrap -mx-8">
             <div className="w-full lg:w-1/2 px-8">
@@ -53,7 +53,7 @@ export default function contact() {
             </div>
           </div>
         </div>
-        <img src="images/banniere.png" alt="Bannière" className="w-full h-24  object-fit: fill rounded-b-md" />
+        <img src="images/banniere.png" alt="Bannière" className="w-full h-24  object-fit: fill rounded-b-xl" />
       </div>
     </div>
   );
