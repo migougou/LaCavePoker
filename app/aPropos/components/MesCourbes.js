@@ -1,23 +1,52 @@
-'use client'
+"use client"
 import { useState } from 'react';
+import { Button } from 'flowbite-react';
+
+const CurveData = [
+    {
+        limit: "5€",
+        imageUrl: "images/courbe.png",
+    },
+    {
+        limit: "10€",
+        imageUrl: "images/courbe.png",
+    },
+    {
+        limit: "20€",
+        imageUrl: "images/courbe.png",
+    },
+    {
+        limit: "50€",
+        imageUrl: "images/courbe.png",
+    },
+    // Ajoutez d'autres courbes ici si nécessaire
+];
 
 export default function MesCourbes() {
-  const [selectedLimit, setSelectedLimit] = useState('5');
+    const [selectedCurve, setSelectedCurve] = useState(null);
 
-  const handleSelectLimit = (limit) => {
-    setSelectedLimit(limit);
-  };
+    return (
+        <div className="py-10 text-center">
+            <div className="py-10 max-w-4xl mx-auto">
+                <h1 className="text-4xl font-bold mb-3 pb-16">MES COURBES</h1>
+            </div>
+            <div className="flex justify-center space-x-4 mb-5">
+                {CurveData.map((curve) => (
+                    <Button
+                        color="gray"
+                        onClick={() => setSelectedCurve(curve)}
+                    >
+                        {curve.limit}
+                    </Button>
+                ))}
+            </div>
+            <hr className="border-stone-950 sm:mx-auto dark:border-gray-700 max-w-sm mx-auto" />
 
-  return (
-    <div>
-      <div className="flex space-x-4 p-4">
-        {['5€', '10€', '20€', '50€'].map((limit) => (
-          <button key={limit} onClick={() => handleSelectLimit(limit)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            {limit}
-          </button>
-        ))}
-      </div>
-      <img src={`/path/to/curve-${selectedLimit}.png`} alt={`Courbe pour ${selectedLimit}`} className="w-full"/>
-    </div>
-  );
+            {selectedCurve && ( // Affiche l'image de la courbe sélectionnée
+                <div className="flex justify-center items-start space-x-4 max-w-4xl mx-auto py-20">
+                    <img src={selectedCurve.imageUrl} alt={`Courbe pour ${selectedCurve.limit}`} className="w-full" />
+                </div>
+            )}
+        </div>
+    );
 }
