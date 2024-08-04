@@ -28,7 +28,7 @@ const ToolData = [
 ];
 
 export default function Outils() {
-    const [selectedTool, setSelectedTool] = useState(null);
+    const [selectedTool, setSelectedTool] = useState(ToolData[0]);
 
     return (
         <div className="py-10 text-center">
@@ -41,6 +41,7 @@ export default function Outils() {
                     <Button
                         color="gray"
                         onClick={() => setSelectedTool(tool)}
+                        className={`hover:bg-blue-500 hover:text-white ${selectedTool.name === tool.name ? 'ring-2 ring-blue-500' : 'text-gray-700'}`}
                     >
                         {tool.name}
                     </Button>

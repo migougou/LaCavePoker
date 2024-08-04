@@ -23,7 +23,7 @@ const CurveData = [
 ];
 
 export default function MesCourbes() {
-    const [selectedCurve, setSelectedCurve] = useState(null);
+    const [selectedCurve, setSelectedCurve] = useState(CurveData[0]);
 
     return (
         <div className="py-10 text-center">
@@ -35,6 +35,7 @@ export default function MesCourbes() {
                     <Button
                         color="gray"
                         onClick={() => setSelectedCurve(curve)}
+                        className={`hover:bg-blue-500 hover:text-white ${selectedCurve.limit === curve.limit ? 'ring-2 ring-blue-500' : 'text-gray-700'}`}
                     >
                         {curve.limit}
                     </Button>
