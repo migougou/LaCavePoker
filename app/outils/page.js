@@ -24,7 +24,7 @@ const ToolData = [
         description: "Description de Trackers...",
         imageUrl: "https://d3ltpfxjzvda6e.cloudfront.net/2015/12/18/poker-tracker-big.png",
     },
-    // Ajoutez d'autres outils ici
+
 ];
 
 export default function Outils() {
