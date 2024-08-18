@@ -19,33 +19,41 @@ return (
             duration="1H00-1H30"
             gameplay="Venir avec un gameplay de 20 minutes en 2 tables max"
             feedback="Retour constructif sur les points à travailler"
+            accessDiscord={true}
+            accessGroupe={true}
             accessRanges={true}
             accessVideos={true}
         />
         <CardPrice
             title="Pack 10 heures"
-            price="400"
-            duration="10 heures de coaching"
-            gameplay="Jeu 3"
-            feedback="Retour par DM sur les mains jouées"
+            price="500"
+            duration="1H à 2H / semaine"
+            gameplay=""
+            feedback=""
+            accessDiscord={true}
+            accessGroupe={true}
             accessRanges={true}
             accessVideos={true}
         />
         <CardPrice
             title="Pack 20 heures"
-            price="800"
-            duration="20 heures de coaching"
-            gameplay="Jeu 6"
-            feedback="Réduction sur les cours privés"
+            price="900"
+            duration="1H à 2H / semaine"
+            gameplay="2H00 de coaching offertes"
+            feedback=""
+            accessDiscord={true}
+            accessGroupe={true}
             accessRanges={true}
             accessVideos={true}
         />
         <CardPrice
-            title="Coaching for Profit"
-            price="Contact us"
-            duration="Coaching sur mesure"
-            gameplay="Accès à un groupe privé Facebook"
-            feedback="Support personnalisé par email"
+            title="Pack découverte"
+            price="Gratuit"
+            duration="1H00"
+            gameplay="Venir avec un gameplay de 20 min en 2 tables"
+            feedback="Retour constructif sur les points à travailler"
+            accessDiscord={true}
+            accessGroupe={true}
             accessRanges={true}
             accessVideos={true}
         />
