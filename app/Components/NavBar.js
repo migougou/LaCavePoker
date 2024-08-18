@@ -1,14 +1,8 @@
 "use client"
 import Link from 'next/link';
 import { MoonIcon, UserIcon } from '@heroicons/react/24/solid';
-import { useState } from 'react';
 
-export default function NavBar() {
-  const [dark, setDark] = useState(false);
-  const toggleDarkMode = () => {
-    setDark(!dark);
-  };
-
+export default function NavBar({ dark, toggleDarkMode }) {
   return (
     <div className={dark ? "dark" : ""}>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">

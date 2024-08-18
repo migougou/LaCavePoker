@@ -1,18 +1,16 @@
-
-
-export default function contact() {
+export default function Contact() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-10 p-16">
-      <div className="w-full max-w-4xl bg-white border border-gray-300 shadow-lg rounded-xl">
+    <div className="flex flex-col items-center min-h-screen bg-gray-100 dark:bg-gray-900 p-16">
+      <div className="w-full max-w-4xl bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl">
         <div className="p-10">
           <div className="flex flex-wrap -mx-8">
             <div className="w-full lg:w-1/2 px-8">
-              <h1 className="text-xl font-semibold text-gray-900 mb-4">Me contacter</h1>
-              <p className="text-gray-600 mb-6">
+              <h1 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Me contacter</h1>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Vous avez des questions ou vous voulez en savoir plus?<br /> N'hésitez pas à me contacter en utilisant le formulaire ci-contre.<br /> Je vous répondrai dès que possible!
               </p>
-              <h1 className="text-xl font-semibold text-gray-900 mb-4">Mais aussi</h1>
-              <p className="text-gray-600 mb-6">
+              <h1 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Mais aussi</h1>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Tu peux aussi me contacter via ces réseaux sociaux
               </p>
               <div className="flex space-x-4 mb-6">
@@ -31,29 +29,29 @@ export default function contact() {
               <form className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <input type="text" id="prenom" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" required placeholder="Prénom" />
+                    <input type="text" id="prenom" className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white" required placeholder="Prénom" />
                   </div>
                   <div>
-                    <input type="text" id="nom" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" required placeholder="Nom" />
+                    <input type="text" id="nom" className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white" required placeholder="Nom" />
                   </div>
                 </div>
                 <div>
-                  <input type="text" id="name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" required placeholder="E-mail" />
+                  <input type="text" id="name" className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white" required placeholder="E-mail" />
                 </div>
                 <div>
-                  <input type="email" id="email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" required placeholder="Objet" />
+                  <input type="email" id="email" className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white" required placeholder="Objet" />
                 </div>
                 <div>
-                  <textarea id="message" rows="4" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" required placeholder="Message"></textarea>
+                  <textarea id="message" rows="4" className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white" required placeholder="Message"></textarea>
                 </div>
                 <div className="flex justify-center">
-                  <button type="submit" className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Envoyer mon message</button>
+                  <button type="submit" className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-900">Envoyer mon message</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <img src="images/banniere.png" alt="Bannière" className="w-full h-24  object-fit: fill rounded-b-xl" />
+        <img src="images/banniere.png" alt="Bannière" className="w-full h-24 object-fit: fill rounded-b-xl" />
       </div>
     </div>
   );
