@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
@@ -26,9 +25,12 @@ export default function Accueil() {
     }, []
     );
 
+
+
     return (
 
         <div>
+            <div>
             <h1 className="mt-10 text-3xl font-bold">Contacts List</h1>
             {contacts.length > 0 ? (
                 <ul className="mt-4 space-y-4">
@@ -45,7 +47,9 @@ export default function Accueil() {
             ) : (
                 <p>No contacts found.</p>
             )}
+            </div>
         </div>
+        
 
     )
 }
