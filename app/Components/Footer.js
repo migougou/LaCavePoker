@@ -7,14 +7,14 @@ export default function Footer() {
                 <hr className="border-stone-950 sm:mx-auto dark:border-gray-700" />
             </div>
             <div className="px-20 pt-2">
-                <div className="flex justify-between items-center">
-                    <div className="flex items-center space-x-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center">
+                    <div className="flex justify-center w-full sm:justify-start sm:w-auto">
                         <Link href="/"><img src="images/logo 2.png" className="h-28" alt="La Cave Poker" /></Link>
                     </div>
                     <div className="flex-grow relative">
                         <div className="flex flex-col items-center mt-4">
                             <span className="text-xl font-semibold mb-4 dark:text-gray-300">Toutes nos pages</span>
-                            <div className="flex flex-wrap justify-center space-x-6 text-sm">
+                            <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
                                 <div className="flex flex-col space-y-2">
                                     <Link href="/" className="hover:text-blue-700 dark:hover:text-blue-400">Accueil</Link>
                                     <Link href="/aPropos" className="hover:text-blue-700 dark:hover:text-blue-400">À propos</Link>
@@ -26,16 +26,16 @@ export default function Footer() {
                                     <Link href="/videos" className="hover:text-blue-700 dark:hover:text-blue-400">Vidéos</Link>
                                 </div>
                             </div>
+                            <Link href="/contact" className="text-lg font-semibold hover:text-blue-700 dark:hover:text-blue-400 mt-4 sm:absolute sm:top-0 sm:right-0 sm:mr-24">Me contacter</Link>
                         </div>
-                        <Link href="/contact" className="text-lg font-semibold hover:text-blue-700 dark:hover:text-blue-400 absolute top-0 right-0 mr-24 pt-12">Me contacter</Link>
                     </div>
                 </div>
-                <div className="my-2 flex justify-between items-center">
-                    <div className="flex-auto flex justify-start">
-                        <a href="#" className="text-sm hover:text-blue-700 dark:hover:text-blue-400 pr-4">Conditions générales d'utilisation</a>
-                        <a href="#" className="text-sm hover:text-blue-700 dark:hover:text-blue-400">Mentions légales</a>
+                <div className="my-8 flex flex-col sm:flex-row justify-between items-center">
+                    <div className="flex flex-row justify-between w-full sm:w-auto space-x-2">
+                        <a href="#" className="text-sm hover:text-blue-700 dark:hover:text-blue-400 underline">Conditions générales d'utilisation</a>
+                        <a href="#" className="text-sm hover:text-blue-700 dark:hover:text-blue-400 underline">Mentions légales</a>
                     </div>
-                    <div className="flex space-x-4">
+                    <div className="flex justify-center sm:justify-end w-full sm:w-auto space-x-4 pt-4 sm:pt-0">
                         <a href="#" className="hover:opacity-75">
                             <img src="images/youtube.png" alt="YouTube" className="h-12" />
                         </a>
