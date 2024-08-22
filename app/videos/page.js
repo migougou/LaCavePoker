@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
-export default function Accueil() {
+export default function Videos() {
 
     const supabase = createClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL,
