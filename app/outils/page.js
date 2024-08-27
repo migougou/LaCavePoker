@@ -36,11 +36,11 @@ export default function Outils() {
             <hr className="border-stone-950 sm:mx-auto dark:border-gray-700 max-w-lg mx-auto" />
             {selectedTool && (
                 <>
-                    <a href={selectedTool.url} target="_blank" rel="noopener noreferrer">
+                    <a href={selectedTool.siteURL} target="_blank" rel="noopener noreferrer">
                         <h2 className="text-3xl font-semibold mb-4 py-16 hover:text-blue-500 cursor-pointer">{selectedTool.name}</h2>
                     </a>
-                    <div className="flex justify-center items-start space-x-8 max-w-full mx-auto pb-20">
-                        <img src={selectedTool.imageURL} alt={selectedTool.name} className="w-full max-w-3xl object-contain" />
+                    <div className="flex justify-center items-start space-x-20 max-w-full mx-auto pb-20">
+                        <img src={selectedTool.imageURL} alt={selectedTool.name} className="w-full max-w-2xl object-contain" />
                         <div className="max-w-xl text-left">
                             <p className="leading-relaxed text-lg" style={{ whiteSpace: 'pre-line' }}>{selectedTool.description}</p>
                         </div>
