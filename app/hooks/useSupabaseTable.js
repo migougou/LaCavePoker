@@ -1,4 +1,3 @@
-"use client"
 import { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
@@ -15,8 +14,10 @@ export default function useSupabaseTable(tableName) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data, error } = await supabase.from(tableName).select("*");
-        if (error) throw error;
+        const { data, error } = await supabase
+          .from(tableName)
+          .select("*")
+          .order('id', { ascending: true });  
         setData(data);
       } catch (error) {
         setError(error.message);
