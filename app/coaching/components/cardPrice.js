@@ -14,8 +14,8 @@ export default function CardPrice() {
             {cardPrices.map((card) => (
                 <div 
                     key={card.id} 
-                    className={`w-full max-w-xs bg-white border border-black rounded-xl shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col ${
-                        card.pack === "Pack 20H" ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white" : ""
+                    className={`w-full max-w-xs bg-white border border-black rounded-xl shadow p-4 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col ${
+                        card.pack === "Pack 20H" ? "bg-gradient-to-r from-yellow-600 to-yellow-400 text-white" : ""
                     }`}
                 >
                     {/* Titre de la carte */}
@@ -37,43 +37,43 @@ export default function CardPrice() {
                     <ul role="list" className="space-y-6 my-7 flex-grow">
                         {card.time && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"}`}>
-                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 ${card.pack === "Pack 20H" ? "text-white" : "text-blue-700 dark:text-blue-500"} mt-0.5`} />
+                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} mt-0.5`} />
                                 <span className="text-base font-normal leading-tight ms-3">{card.time}</span>
                             </li>
                         )}
                         {card.line1 && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"}`}>
-                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 ${card.pack === "Pack 20H" ? "text-white" : "text-blue-700 dark:text-blue-500"} mt-0.5`} />
+                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} mt-0.5`} />
                                 <span className="text-base font-normal leading-tight ms-3">{card.line1}</span>
                             </li>
                         )}
                         {card.line2 && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"}`}>
-                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 ${card.pack === "Pack 20H" ? "text-white" : "text-blue-700 dark:text-blue-500"} mt-0.5`} />
+                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} mt-0.5`} />
                                 <span className="text-base font-normal leading-tight ms-3">{card.line2}</span>
                             </li>
                         )}
                         {card.accessDiscord && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "line-through text-gray-400 dark:text-gray-500" : ""}`}>
-                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-blue-700 dark:text-blue-500"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
+                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
                                 <span className="text-base font-normal leading-tight ms-3">{card.accessDiscord}</span>
                             </li>
                         )}
                         {card.accessGroupe && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "line-through text-gray-400 dark:text-gray-500" : ""}`}>
-                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-blue-700 dark:text-blue-500"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
+                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
                                 <span className="text-base font-normal leading-tight ms-3">{card.accessGroupe}</span>
                             </li>
                         )}
                         {card.accessRanges && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "line-through text-gray-400 dark:text-gray-500" : ""}`}>
-                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-blue-700 dark:text-blue-500"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
+                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
                                 <span className="text-base font-normal leading-tight ms-3">{card.accessRanges}</span>
                             </li>
                         )}
                         {card.accessVideos && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "line-through text-gray-400 dark:text-gray-500" : ""}`}>
-                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-blue-700 dark:text-blue-500"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
+                                <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
                                 <span className="text-base font-normal leading-tight ms-3">{card.accessVideos}</span>
                             </li>
                         )}
