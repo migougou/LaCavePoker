@@ -40,7 +40,12 @@ export default function Outils() {
                         <h2 className="text-3xl font-semibold mb-4 py-16 hover:text-blue-500 cursor-pointer">{selectedTool.name}</h2>
                     </a>
                     <div className="flex justify-center items-start space-x-20 max-w-full mx-auto pb-20">
-                        <img src={selectedTool.imageURL} alt={selectedTool.name} className="w-full max-w-2xl object-contain" />
+                        <div className="flex flex-col space-y-8">
+                            <img src={selectedTool.imageURL} alt={selectedTool.name} className="w-full max-w-2xl object-contain" />
+                            {selectedTool.name === "HUD" && selectedTool.imageURL2 && (
+                                <img src={selectedTool.imageURL2} alt={`${selectedTool.name} - 2`} className="w-full max-w-2xl object-contain" />
+                            )}
+                        </div>
                         <div className="max-w-xl text-left">
                             <p className="leading-relaxed text-lg" style={{ whiteSpace: 'pre-line' }}>{selectedTool.description}</p>
                         </div>
