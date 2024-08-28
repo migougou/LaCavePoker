@@ -1,3 +1,4 @@
+"use client"
 import QuiSuisJe from './components/QuiSuisJe';
 import MesCourbes from './components/MesCourbes';
 import RetoursEleves from './components/RetoursEleves';

@@ -1,12 +1,31 @@
-export default function QuiSuisJe({ bio }) {
+"use client"
+import { useState, useEffect } from 'react';
+import useSupabaseTable from '../../hooks/useSupabaseTable';
+
+export default function QuiSuisJe() {
+  const [isClient, setIsClient] = useState(false);
+  const { data: bioData, loading, error } = useSupabaseTable('Biographie');
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null; // Ne rien rendre côté serveur
+
+  if (loading) return <div>Chargement...</div>;
+  if (error) return <div>Erreur : {error.message}</div>;
+
   return (
     <div className="flex flex-col items-center text-center py-10">
       <h1 className="text-4xl font-bold mb-4 w-full pt-16">QUI SUIS-JE ?</h1>
-      <div className="flex flex-col justify-center md:flex-row items-center w-full">
-        <img src="images/Seyfo.png" alt="Photo de profil" className="w-full md:w-auto p-4" />
-        <p className="w-full md:w-2/5 p-24 mt-10 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat, velit eget sodales pretium, lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras id turpis non purus facilisis semper. Phasellus tempor quam eu dui fermentum, non consequat nulla dignissim. Vestibulum dignissim eros eget augue maximus feugiat. Vivamus at urna libero. Nullam tincidunt ligula id odio convallis, nec eleifend mauris tristique. Maecenas ac efficitur enim, at egestas lectus. Integer posuere urna nec eleifend efficitur.
-          Sed eu nisi lacinia, congue lorem vitae, feugiat velit. Nam sit amet convallis ipsum. Duis fermentum imperdiet velit, a dictum lacus tempor ut. Nullam commodo sollicitudin justo, vel vehicula libero cursus id. Sed a quam vel ligula volutpat tincidunt. Donec sodales interdum libero. Curabitur vitae augue auctor, tempor justo sit amet, maximus nunc. Phasellus ultrices interdum quam, non volutpat odio posuere nec.</p>
-      </div>
+      {bioData && bioData.map((bio) => (
+        <div key={bio.id}>
+          <div className="flex flex-col md:flex-row items-center w-full">
+            <img src={bio.imageURL} alt="Photo de profil" className="w-full md:w-1/2 lg:w-1/3 p-4 max-w-xs md:max-w-none" />
+            <p className="w-full md:w-1/2 lg:w-2/3 p-4 mt-10 text-lg">{bio.bio}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
