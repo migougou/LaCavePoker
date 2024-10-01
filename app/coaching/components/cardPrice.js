@@ -1,13 +1,15 @@
 'use client';
 
-import useSupabaseTable from '../../hooks/useSupabaseTable';
+import useCardPrices from '@/app/hooks/useCardPrices';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
 export default function CardPrice() {
-    const { data: cardPrices, loading, error } = useSupabaseTable('CardPrice');
+    const { data: cardPrices, loading, error } = useCardPrices();
 
     if (loading) return <p>Chargement...</p>;
     if (error) return <p>Erreur : {error}</p>;
+    if (!cardPrices || cardPrices.length === 0) return <p>Aucune donnée disponible.</p>;
+
 
     return (
         <div className="flex flex-wrap justify-center gap-12">
@@ -62,7 +64,7 @@ export default function CardPrice() {
                         {card.accessGroupe && (
                             <li className={`flex items-start text-left ${card.pack === "Pack 20H" ? "text-white" : "text-gray-500 dark:text-gray-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "line-through text-gray-400 dark:text-gray-500" : ""}`}>
                                 <CheckCircleIcon className={`flex-shrink-0 w-5 h-5 mt-0.5 ${card.pack === "Pack 20H" ? "text-white" : "text-yellow-600 dark:text-yellow-400"} ${card.pack === "LeakFinder" || card.pack === "Pack Découverte" ? "text-gray-400 dark:text-gray-500" : ""}`} />
-                                <span className="text-base font-normal leading-tight ms-3">{card.accessGroupe}</span>
+                                <span className="text-base font-normal leading-tight ms-3">{card.accessGroup}</span>
                             </li>
                         )}
                         {card.accessRanges && (
